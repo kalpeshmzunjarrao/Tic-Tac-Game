@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+        body{
+            background:linear-gradient(
+                48deg,
+                rgba(0,24,151,1)15%,
+                rgba(0,0,0,1)97%
+            );
+            font-family:"Poppins",sans-serif;
+            margin: 30px;
+            margin-left: 30px;
+        }
+        table{
+            background-color:white;
+        }
+        h1{
+            font-size: 50px;
+            
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cross Game</h1>
+    <table border="10" width="300px" height="300px">
+        <tr >
+            <td id=1 onclick="game(0)"></td>
+            <td id=2 onclick="game(1)"></td>
+            <td id=3 onclick="game(2)"></td>
+        </tr>
+        <tr>
+            <td id=4 onclick="game(3)"></td>
+            <td id=5 onclick="game(4)"></td>
+            <td id=6 onclick="game(5)"></td>
+        </tr>
+        <tr>
+            <td id=7 onclick="game(6)"></td>
+            <td id=8 onclick="game(7)"></td>
+            <td id=9 onclick="game(8)"></td>
+        </tr>
+    </table>
+    <script>
+       var count=0
+       
+        function game(val){
+            
+        
+            count=count+1;
+           
+            if(count%2==0){
+               
+                document.getElementsByTagName('td')[val].style.backgroundColor='violet'
+               
+                
+            }
+           else{
+            document.getElementsByTagName('td')[val].style.backgroundColor='red'
+           }
+          
+           
+        }
+      
+      
+    </script>
+</body>
+</html>
